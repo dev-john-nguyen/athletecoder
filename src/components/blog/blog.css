@@ -1,0 +1,21 @@
+.blog-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 3rem;
+    margin-top: 10rem;
+}
+
+@media only screen and (max-width: 950px) {
+    .blog-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blog-content {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+}
