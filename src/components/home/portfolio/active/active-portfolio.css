@@ -1,0 +1,141 @@
+.active-portfolio {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    max-width: 70%;
+    transition: 1s;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    box-shadow: 5px 5px 15px 5px #cfcfcf;
+    box-sizing: border-box;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.active-portfolio-content {
+    background-color: rgba(19, 19, 19, 0.9);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.active-portfolio-content h1 {
+    color: white;
+    margin: 0px 0px 10px 0px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.active-portfolio-content p {
+    color: rgb(235, 235, 235);
+    margin: 0px;
+    font-size: 18px;
+}
+
+.active-portfolio-content img {
+    width: 20vw;
+    height: auto;
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+.active-portfolio-content a {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0px;
+    color: rgb(20, 20, 20);
+    border: none;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.active-portfolio-content ul {
+    font-size: 18px;
+    color: rgb(235, 235, 235);
+    align-self: flex-start;
+    margin-block-start: 10px;
+    margin-block-end: 0px;
+    padding-inline-start: 20px;
+}
+
+.active-portfolio-description {
+    margin-top: 10px;
+}
+
+.active-portfolio-header {
+    width: 100%;
+}
+
+.active-portfolio-header p {
+    margin-top: 5px;
+}
+
+.inactive {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 0px;
+    border: none;
+    background-color: rgb(139, 139, 139);
+    margin-top: 20px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    color: rgb(180, 180, 180);
+    font-family: "Noto Serif", serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .active-portfolio {
+        max-width: 100%;
+    }
+
+    .active-portfolio-content {
+        padding: 20px;
+    }
+
+    .active-portfolio-content h1 {
+        font-size: 20px;
+    }
+
+    .active-portfolio-content p {
+        font-size: 16px;
+    }
+
+    .active-portfolio-content ul {
+        font-size: 16px;
+    }
+
+    .active-portfolio-content a {
+        font-size: 12px;
+    }
+
+    .inactive {
+        font-size: 12px;
+    }
+
+    .active-portfolio-content img {
+        width: 40vw;
+        height: auto;
+    }
+}
