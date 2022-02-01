@@ -8,7 +8,9 @@ const Navbar = () => {
         <footer>
             <div className="footer">
                 <section className="footer-section">
-                    <Logo />
+                    <a href='./'>
+                        <Logo />
+                    </a>
                 </section>
 
                 <section className="footer-section">

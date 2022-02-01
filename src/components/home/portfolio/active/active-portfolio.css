@@ -7,21 +7,45 @@
     align-self: center;
     justify-self: center;
     max-width: 70%;
-    transition: 1s;
-    animation-name: slideIn;
-    animation-duration: 1s;
     box-shadow: 5px 5px 15px 5px #cfcfcf;
     box-sizing: border-box;
+    transform: translateX(-120%);
+}
+
+.slideIn {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    opacity: 1;
+    animation-fill-mode: forwards;
+}
+
+.slideOut {
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translateX(-120%);
     }
     to {
         opacity: 1;
         transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-120%);
     }
 }
 

@@ -18,6 +18,10 @@ button {
   font-family: "Noto Sans", sans-serif;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .container {
   max-width: 1000px;
   width: 90%;

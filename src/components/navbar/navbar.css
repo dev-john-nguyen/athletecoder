@@ -1,6 +1,26 @@
 .nav {
     border-bottom: 1px solid rgb(241, 241, 241);
     box-sizing: border-box;
+    z-index: 100;
+    width: 100%;
+}
+
+.trans {
+    position: absolute;
+    border-bottom: none;
+}
+
+.trans {
+    position: absolute;
+    border-bottom: none;
+}
+
+.trans .nav-left svg {
+    fill: rgb(228, 228, 228);
+}
+
+.trans .nav-right a {
+    color: rgb(228, 228, 228);
 }
 
 .nav-container {
@@ -32,7 +52,7 @@
 }
 
 .nav-right a {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 5rem;
     cursor: pointer;
     color: rgb(20, 20, 20);
@@ -44,8 +64,17 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .nav-right {
+        flex: 1;
+        justify-content: space-evenly;
+    }
+
+    .nav-left {
+        flex: 0.2;
+    }
+
     .nav-right a {
-        font-size: 14px;
+        font-size: 12px;
         margin-left: 1rem;
     }
 
