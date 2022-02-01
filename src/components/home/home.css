@@ -1,6 +1,25 @@
 .space-between-content {
-    margin-top: 20vh;
+    margin-top: 30vh;
     margin-bottom: 20vh;
+    opacity: 0;
+}
+
+.animate-div {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
 
 .home-header {

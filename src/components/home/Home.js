@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import Me from '../../assets/Me.png';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Contact from '../contact/Contact';
 import { ReactComponent as PortfolioSvg } from './svgs/portfolio.svg';
 import { ReactComponent as BlogSvg } from './svgs/blog.svg';
@@ -19,12 +18,50 @@ import Header from './header';
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState();
     const [hide, setHide] = useState(true);
+    const portRef = useRef();
+    const blogRef = useRef();
+    const testRef = useRef();
+    const contactRef = useRef();
+    const portPos = useRef();
+    const blogPos = useRef();
+    const testPos = useRef();
+    const contactPos = useRef();
+
+    const shouldAnimateDiv = (windowPos, divPos, divRef) => {
+        if (portPos.current && windowPos > divPos) {
+            divRef.classList.add('animate-div')
+        }
+    }
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', (e) => {
+            const windowPos = window.pageYOffset;
+            shouldAnimateDiv(windowPos, portPos.current, portRef.current)
+            shouldAnimateDiv(windowPos, blogPos.current, blogRef.current)
+            shouldAnimateDiv(windowPos, contactPos.current, contactRef.current)
+            shouldAnimateDiv(windowPos, testPos.current, testRef.current)
+        });
+    }, [])
+
+    const getPos = (ref) => {
+        return ref.getBoundingClientRect().top
+    }
+
+    useLayoutEffect(() => {
+        if (portRef.current) {
+            portPos.current = getPos(portRef.current)
+            blogPos.current = getPos(blogRef.current)
+            contactPos.current = getPos(contactRef.current)
+            testPos.current = getPos(testRef.current)
+        }
+    }, [])
 
     return (
         <>
             <Header />
             <div className="container">
-                <div className="portfolio space-between-content">
+                <div className="portfolio space-between-content" ref={portRef}>
                     <div className="home-header">
                         <PortfolioSvg />
                         <h1 className="home-header">Portfolio</h1>
@@ -53,7 +90,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="blog space-between-content">
+                <div className="blog space-between-content" ref={testRef}>
 
                     <div className="home-header">
                         <QuoteSvg />
@@ -66,7 +103,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="blog space-between-content">
+                <div className="blog space-between-content" ref={blogRef}>
 
                     <div className="home-header">
                         <BlogSvg />
@@ -92,7 +129,7 @@ const Home = () => {
                 </div>
 
 
-                <div className="contact space-between-content">
+                <div className="contact space-between-content" ref={contactRef}>
 
                     <div className="home-header">
                         <ContactSvg />
