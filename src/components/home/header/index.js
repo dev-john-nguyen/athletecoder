@@ -4,12 +4,18 @@ import { ReactComponent as Astro } from './space/astronaut.svg';
 import { ReactComponent as Platform } from './space/platform.svg';
 import { ReactComponent as Sun } from './space/sun.svg';
 import { ReactComponent as Footprints } from './space/footprints.svg';
+import { ReactComponent as Folder } from './space/folder.svg';
+import Resume from '../../../assets/Resume.pdf';
 import './style.css';
 
 const Header = () => {
 
     const onClick = () => {
         window.location.href = './contact'
+    }
+
+    const openResume = () => {
+        window.open(Resume)
     }
 
     return (
@@ -35,6 +41,9 @@ const Header = () => {
             </div>
             <div className="header-footprints">
                 <Footprints />
+            </div>
+            <div className="header-folder" onClick={openResume}>
+                <Folder />
             </div>
             <div className="header-platform">
                 <Platform />
