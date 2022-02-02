@@ -4,9 +4,11 @@ import './blog-item.css'
 const BlogItem = ({ img, title, des, uri }) => {
     return (
         <div className="blog-item">
-            <div className="blog-item-img">
-                <img src={img} alt={title} />
-            </div>
+            <a href={uri} target="_blank" rel="noreferrer">
+                <div className="blog-item-img">
+                    <img src={img} alt={title} />
+                </div>
+            </a>
 
             <div className="blog-item-content">
                 <p className="blog-item-title">

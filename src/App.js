@@ -5,7 +5,6 @@ import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact';
-import About from './components/about';
 
 function App() {
 
@@ -19,8 +18,6 @@ function App() {
         return <Blog />
       case '/contact':
         return <Contact />
-      case '/about':
-        return <About />
       default:
         return <Home />
     }
@@ -30,7 +27,6 @@ function App() {
     switch (window.location.pathname) {
       case '/blog':
       case '/contact':
-      case '/about':
         return false
       default:
         return true

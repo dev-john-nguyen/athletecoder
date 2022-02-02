@@ -5,7 +5,7 @@ import blogPosts from './blog-posts.json';
 
 const Blog = () => {
     return (
-        <div className="container">
+        <div className="container page-container">
             <div className="page-header">
                 <h1>Blog</h1>
                 <BlogSvg />

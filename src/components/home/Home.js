@@ -13,10 +13,12 @@ import portfolioItems from './portfolioItems';
 import Testimonial from './testimonial';
 import TestOne from '../../assets/test-one.png'
 import TestTwo from '../../assets/test-two.png';
+import Rocket from '../../assets/Rocket.png';
 import Header from './header';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState();
+    const [bio, setBio] = useState(false);
     const [hide, setHide] = useState(true);
     const portRef = useRef();
     const blogRef = useRef();
@@ -60,6 +62,21 @@ const Home = () => {
     return (
         <>
             <Header />
+            {/* <div className="about-rocket">
+                <div className="about-rocket-content" onMouseOver={() => setBio(true)} onMouseLeave={() => setBio(false)}>
+                    <img src={Rocket} alt='about rocket' />
+                    {
+                        bio && (
+                            <div className="about-rocket-text">
+                                <h1>Hello Again!</h1>
+                                <p>
+                                    I hope you are having a good day so far :)
+                                </p>
+                            </div>
+                        )
+                    }
+                </div>
+            </div> */}
             <div className="container">
                 <div className="portfolio space-between-content" ref={portRef}>
                     <div className="home-header">

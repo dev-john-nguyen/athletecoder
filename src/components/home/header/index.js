@@ -3,6 +3,7 @@ import { ReactComponent as Planet } from './space/planet.svg'
 import { ReactComponent as Astro } from './space/astronaut.svg';
 import { ReactComponent as Platform } from './space/platform.svg';
 import { ReactComponent as Sun } from './space/sun.svg';
+import { ReactComponent as Footprints } from './space/footprints.svg';
 import './style.css';
 
 const Header = () => {
@@ -31,6 +32,9 @@ const Header = () => {
             </div>
             <div className="header-astro">
                 <Astro />
+            </div>
+            <div className="header-footprints">
+                <Footprints />
             </div>
             <div className="header-platform">
                 <Platform />
