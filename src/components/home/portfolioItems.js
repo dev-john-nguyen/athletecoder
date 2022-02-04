@@ -43,7 +43,7 @@ export default [
         ),
         img: Habt,
         className: 'portfolio-item',
-        github: '',
+        github: 'https://github.com/nguyening20/Habts',
         website: 'https://habt-b0f23.web.app/'
     },
     {
@@ -67,7 +67,7 @@ export default [
         ),
         img: Softlete,
         className: 'portfolio-item',
-        github: '',
+        github: 'https://github.com/nguyening20/softlete_public',
         website: 'https://www.softlete.com/',
     },
     {
