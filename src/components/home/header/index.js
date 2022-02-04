@@ -42,7 +42,7 @@ const Header = () => {
             <div className="header-footprints">
                 <Footprints />
             </div>
-            <div className="header-folder" onClick={openResume}>
+            <div className="header-folder" onClick={openResume} title='My Resume'>
                 <Folder />
             </div>
             <div className="header-platform">

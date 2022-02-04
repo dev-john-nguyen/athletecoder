@@ -1,19 +1,17 @@
-import { useEffect } from 'react';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact';
+import BlogPage from './components/blog/page';
 
 function App() {
 
-  useEffect(() => {
-    console.log(window.location.pathname)
-  }, [])
-
   const renderContent = () => {
-    switch (window.location.pathname) {
+    const path = window.location.pathname;
+    if (path.includes('/blog/')) return <BlogPage path={path} />
+    switch (path) {
       case '/blog':
         return <Blog />
       case '/contact':
@@ -24,6 +22,8 @@ function App() {
   }
 
   const isTrans = () => {
+    const path = window.location.pathname;
+    if (path.includes('/blog/')) return false
     switch (window.location.pathname) {
       case '/blog':
       case '/contact':

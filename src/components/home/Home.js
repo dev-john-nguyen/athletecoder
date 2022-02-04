@@ -13,12 +13,10 @@ import portfolioItems from './portfolioItems';
 import Testimonial from './testimonial';
 import TestOne from '../../assets/test-one.png'
 import TestTwo from '../../assets/test-two.png';
-import Rocket from '../../assets/Rocket.png';
 import Header from './header';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState();
-    const [bio, setBio] = useState(false);
     const [hide, setHide] = useState(true);
     const portRef = useRef();
     const blogRef = useRef();
@@ -30,7 +28,7 @@ const Home = () => {
     const contactPos = useRef();
 
     const shouldAnimateDiv = (windowPos, divPos, divRef) => {
-        if (portPos.current && windowPos > divPos) {
+        if (divPos && divRef && windowPos > divPos) {
             divRef.classList.add('animate-div')
         }
     }
@@ -62,21 +60,6 @@ const Home = () => {
     return (
         <>
             <Header />
-            {/* <div className="about-rocket">
-                <div className="about-rocket-content" onMouseOver={() => setBio(true)} onMouseLeave={() => setBio(false)}>
-                    <img src={Rocket} alt='about rocket' />
-                    {
-                        bio && (
-                            <div className="about-rocket-text">
-                                <h1>Hello Again!</h1>
-                                <p>
-                                    I hope you are having a good day so far :)
-                                </p>
-                            </div>
-                        )
-                    }
-                </div>
-            </div> */}
             <div className="container">
                 <div className="portfolio space-between-content" ref={portRef}>
                     <div className="home-header">
@@ -124,24 +107,14 @@ const Home = () => {
 
                     <div className="home-header">
                         <BlogSvg />
-                        <a href='./blog'>
+                        <a href='/blog'>
                             <h1 className="home-header">Blog</h1>
                         </a>
                     </div>
 
                     <div className="blog-flex">
-                        <BlogItem
-                            img={"https://cdn-images-1.medium.com/max/1024/0*k6DYMimQrjXLMJif"}
-                            title={blogPosts[0].title}
-                            des={blogPosts[0].content}
-                            uri={blogPosts[0].link}
-                        />
-                        <BlogItem
-                            img={"https://cdn-images-1.medium.com/max/1024/0*k6DYMimQrjXLMJif"}
-                            title={blogPosts[0].title}
-                            des={blogPosts[0].content}
-                            uri={blogPosts[0].link}
-                        />
+                        <BlogItem post={blogPosts[0]} />
+                        <BlogItem post={blogPosts[1]} />
                     </div>
                 </div>
 

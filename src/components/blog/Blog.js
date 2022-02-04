@@ -13,24 +13,11 @@ const Blog = () => {
 
             <div className="page-content">
                 <div className="blog-content">
-                    <BlogItem
-                        img={"https://cdn-images-1.medium.com/max/1024/0*k6DYMimQrjXLMJif"}
-                        title={blogPosts[0].title}
-                        des={blogPosts[0].content}
-                        uri={blogPosts[0].link}
-                    />
-                    <BlogItem
-                        img={"https://cdn-images-1.medium.com/max/1024/0*k6DYMimQrjXLMJif"}
-                        title={blogPosts[0].title}
-                        des={blogPosts[0].content}
-                        uri={blogPosts[0].link}
-                    />
-                    <BlogItem
-                        img={"https://cdn-images-1.medium.com/max/1024/0*k6DYMimQrjXLMJif"}
-                        title={blogPosts[0].title}
-                        des={blogPosts[0].content}
-                        uri={blogPosts[0].link}
-                    />
+                    {
+                        blogPosts.map((post) => (
+                            <BlogItem post={post} />
+                        ))
+                    }
                 </div>
             </div>
         </div>

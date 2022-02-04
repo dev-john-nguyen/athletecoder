@@ -4,7 +4,7 @@
 }
 
 .blog-item a {
-    color: blue;
+    color: rgb(47, 47, 255);
     text-decoration: underline;
     font-size: 14px;
     font-family: "Noto Sans", sans-serif;
@@ -12,6 +12,7 @@
 
 .blog-item-img {
     box-shadow: 2px 2px 20px 2px #cfcfcf;
+    position: relative;
 }
 
 .blog-item img {
@@ -19,23 +20,52 @@
     height: auto;
 }
 
+/* .blog-item-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    opacity: 0.2;
+    left: 0;
+    top: 0;
+} */
+
 .blog-item-content {
     width: 80%;
     margin: auto;
     position: relative;
     top: -8%;
+    z-index: 100;
 }
 
 .blog-item-title {
     font-size: 2.5rem;
     font-family: "Noto Serif", serif;
-    margin: 0 0 10px 0;
+    margin: 0 0 0 0;
+    display: inline;
+    text-align: left;
+    background-image: linear-gradient(to right, rgb(209, 209, 209, 0.8), rgb(209, 209, 209, 0.3));
+    background-position: 0 0.6em;
+    background-repeat: repeat-x;
+    background-size: 1px 0.8em;
+    line-height: 35px;
 }
 
-.blog-item-des {
+.blog-item-des h4 {
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+    margin: 10px 0 10px 0;
+    color: rgb(169 169 169);
+    font-weight: 400;
+}
+
+.blog-item-des p {
     font-size: 16px;
     font-family: "Noto Sans", sans-serif;
     margin: 0 0 5px 0;
+    line-height: 25px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -43,13 +73,18 @@
         width: 80%;
         margin: auto;
         position: relative;
-        top: -30px;
+        top: -40px;
     }
 
     .blog-item-title {
-        font-size: 20px;
+        font-size: 25px;
     }
-    .blog-item-des {
+
+    .blog-item-des h4 {
+        font-size: 14px;
+    }
+
+    .blog-item-des p {
         font-size: 14px;
     }
 }

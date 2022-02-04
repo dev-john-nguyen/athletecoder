@@ -11,8 +11,12 @@ export default [
         date: '02/2020 - 05/2020',
         description: (
             <>
-                <p>Books&Brewskies was a website created for a podcast. The website had a store that used stripe to handle the payment processing. It also had a blog page that could be dynamically updated from the admin panel."
+                <p>Books&Brewskies was a ecommerce website created with React. The website included:"
                 </p>
+                <ul>
+                    <li>A store that interacted with Stripe's API to handle payment processing</li>
+                    <li>A blog dynamically updated from an admin panel</li>
+                </ul>
             </>
         ),
         img: Books,
@@ -31,7 +35,7 @@ export default [
                 <ul>
                     <li>Daily Notifications</li>
                     <li>Cloud scheduler</li>
-                    <li>Banner awards</li>
+                    <li>Multiple banners awards awarded for reaching goals</li>
                     <li>Note Tool</li>
                     <li>IAP (In App Purchase)</li>
                 </ul>
@@ -48,7 +52,7 @@ export default [
         date: '07/2021 - Present',
         description: (
             <>
-                <p>Softlete is an app to help athletes manage their training. There is a social networking aspect to it as well. There are many functionalites configured in this app, but a couple functionalities include:
+                <p>Softlete is an app to be used as a tool to help athletes manage and enhance their training. There is a social networking aspect to it as well. There are many functionalites configured in this app, but a couple functionalities include:
                 </p>
                 <ul>
                     <li>Notifications</li>
@@ -96,9 +100,9 @@ export default [
                 <p>PVOC is a nonprofit organization that promotes climate assemblies. Key duties include, but not limited to:
                 </p>
                 <ul>
-                    <li>Maintain the Squarespace website</li>
+                    <li>Website maintaince</li>
                     <li>Administer Google Admin</li>
-                    <li>Launched email marketing campaigns with Mailchimp.</li>
+                    <li>Launched email marketing campaigns with Mailchimp</li>
                 </ul>
             </>
         ),

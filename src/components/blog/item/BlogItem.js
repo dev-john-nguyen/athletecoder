@@ -1,23 +1,24 @@
 import './blog-item.css'
 
 
-const BlogItem = ({ img, title, des, uri }) => {
+const BlogItem = ({ post }) => {
+    const { thumbnail, title, description, id } = post;
+    const uri = `/blog/${id}`
     return (
         <div className="blog-item">
-            <a href={uri} target="_blank" rel="noreferrer">
+            <a href={uri}>
                 <div className="blog-item-img">
-                    <img src={img} alt={title} />
+                    <img src={thumbnail} alt={title} />
                 </div>
             </a>
 
             <div className="blog-item-content">
-                <p className="blog-item-title">
+                <h2 className="blog-item-title">
                     {title}
-                </p>
-                <p className="blog-item-des">
-                    {des}
-                </p>
-                <a href={uri} target="_blank" rel="noreferrer">
+                </h2>
+                <div className="blog-item-des" dangerouslySetInnerHTML={{ __html: description }}>
+                </div>
+                <a href={uri}>
                     Read More
                 </a>
             </div>
