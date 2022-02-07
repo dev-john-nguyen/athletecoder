@@ -24,7 +24,9 @@ const Navbar = () => {
 
                 <section className="footer-section">
                     <div className="menu">
-                        <h1>Menu</h1>
+                        <a href='/'>
+                            <h1>Menu</h1>
+                        </a>
                         <a href='/'>Home</a>
                         <a href='/blog'>Blog</a>
                         <a href='/contact'>Contact</a>
@@ -33,7 +35,9 @@ const Navbar = () => {
 
                 <section className="footer-section">
                     <div className="menu">
-                        <h1>Blog</h1>
+                        <a href='/blog'>
+                            <h1>Blog</h1>
+                        </a>
                         {renderBlogLinks()}
                     </div>
                 </section>

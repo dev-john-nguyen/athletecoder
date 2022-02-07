@@ -35,7 +35,7 @@ footer {
     color: white;
 }
 
-.menu a {
+.menu a:not(:first-child) {
     font-size: 12px;
     color: rgb(219, 219, 219);
     margin-top: 1.5rem;

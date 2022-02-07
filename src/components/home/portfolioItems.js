@@ -14,8 +14,9 @@ export default [
                 <p>Books&Brewskies was a ecommerce website created with React. The website included:"
                 </p>
                 <ul>
-                    <li>A store that interacted with Stripe's API to handle payment processing</li>
-                    <li>A blog dynamically updated from an admin panel</li>
+                    <li>A store that interacts with Stripe's API to handle payment processing</li>
+                    <li>A blog</li>
+                    <li>An Admin Panel to update blog content and store items</li>
                 </ul>
             </>
         ),
@@ -26,7 +27,7 @@ export default [
     },
     {
         title: 'Habts',
-        job: 'React Developer (Mobile & Web)',
+        job: 'Full Stack Developer (React & Firebse)',
         date: '03/2021 - Present',
         description: (
             <>
@@ -48,11 +49,11 @@ export default [
     },
     {
         title: 'Softlete',
-        job: 'React Developer (Mobile & Web)',
+        job: 'Full Stack Developer (React, Firebase, and Node)',
         date: '07/2021 - Present',
         description: (
             <>
-                <p>Softlete is an app to be used as a tool to help athletes manage and enhance their training. There is a social networking aspect to it as well. There are many functionalites configured in this app, but a couple functionalities include:
+                <p>Softlete is a tool/service to help athletes manage their workouts and to enhance their training. There is a social networking aspect to it as well. There are many functionalites configured in this app, but a couple functionalities include:
                 </p>
                 <ul>
                     <li>Notifications</li>
@@ -100,9 +101,9 @@ export default [
                 <p>PVOC is a nonprofit organization that promotes climate assemblies. Key duties include, but not limited to:
                 </p>
                 <ul>
-                    <li>Website maintaince</li>
-                    <li>Administer Google Admin</li>
-                    <li>Launched email marketing campaigns with Mailchimp</li>
+                    <li>Website content and design</li>
+                    <li>Administer of Google Admin</li>
+                    <li>Launched and designed email marketing campaigns with Mailchimp</li>
                 </ul>
             </>
         ),
