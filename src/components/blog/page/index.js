@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import './styles.css';
 import { ReactComponent as BlogSvg } from '../../home/svgs/blog.svg';
-import blogPosts from '../blog-posts.json';
+import { PostsContext } from '../../../App';
 
 const BlogPage = ({ path }) => {
+    const posts = useContext(PostsContext);
+
     const id = path.replace('/blog/', '')
 
-    const blog = blogPosts.find(blog => blog.id === id)
+    const blog = posts.find(blog => blog.id === id)
 
     if (!blog) return (
         <div className="container page-container">

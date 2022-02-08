@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import './blog.css';
 import { ReactComponent as BlogSvg } from '../home/svgs/blog.svg';
 import BlogItem from './item/BlogItem';
-import blogPosts from './blog-posts.json';
+import { PostsContext } from '../../App';
 
 const Blog = () => {
+    const posts = useContext(PostsContext);
+
     return (
         <div className="container page-container">
             <div className="page-header">
@@ -14,7 +17,7 @@ const Blog = () => {
             <div className="page-content">
                 <div className="blog-content">
                     {
-                        blogPosts.map((post) => (
+                        posts.map((post) => (
                             <BlogItem post={post} key={post.id} />
                         ))
                     }

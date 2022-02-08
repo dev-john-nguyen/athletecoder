@@ -1,12 +1,14 @@
+import { useContext } from 'react';
 import './footer.css';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
-import blogPosts from '../blog/blog-posts.json';
+import { PostsContext } from '../../App';
 
 
 const Navbar = () => {
+    const posts = useContext(PostsContext);
 
     const renderBlogLinks = () => {
-        const items = blogPosts.slice(0, 4)
+        const items = posts.slice(0, 4)
         return items.map((post, i) => {
             const uri = `/blog/${post.id}`
             return <a href={uri} key={i}>{post.title}</a>

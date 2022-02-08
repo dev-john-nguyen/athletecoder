@@ -1,10 +1,9 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState, useContext } from 'react';
 import Contact from '../contact/Contact';
 import { ReactComponent as PortfolioSvg } from './svgs/portfolio.svg';
 import { ReactComponent as BlogSvg } from './svgs/blog.svg';
 import { ReactComponent as ContactSvg } from './svgs/contact.svg';
 import { ReactComponent as QuoteSvg } from './svgs/quote.svg';
-import blogPosts from '../blog/blog-posts.json';
 import './home.css';
 import BlogItem from '../blog/item/BlogItem';
 import PortfolioItem from './portfolio/PortfolioItem';
@@ -14,6 +13,7 @@ import Testimonial from './testimonial';
 import TestOne from '../../assets/test-one.png'
 import TestTwo from '../../assets/test-two.png';
 import Header from './header';
+import { PostsContext } from '../../App';
 
 const Home = () => {
     const [activeIndex, setActiveIndex] = useState();
@@ -26,6 +26,7 @@ const Home = () => {
     const blogPos = useRef();
     const testPos = useRef();
     const contactPos = useRef();
+    const posts = useContext(PostsContext);
 
     const shouldAnimateDiv = (windowPos, divPos, divRef) => {
         if (divPos && divRef && windowPos > divPos) {
@@ -113,8 +114,14 @@ const Home = () => {
                     </div>
 
                     <div className="blog-flex">
-                        <BlogItem post={blogPosts[0]} />
-                        <BlogItem post={blogPosts[1]} />
+                        {
+                            posts.length > 1 && (
+                                <>
+                                    <BlogItem post={posts[0]} />
+                                    <BlogItem post={posts[1]} />
+                                </>
+                            )
+                        }
                     </div>
                 </div>
 
