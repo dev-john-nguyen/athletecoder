@@ -1,18 +1,14 @@
 import { ReactComponent as Stars } from './space/stars.svg'
 import { ReactComponent as Planet } from './space/planet.svg'
 import { ReactComponent as Astro } from './space/astronaut.svg';
-import { ReactComponent as Folder } from './space/folder.svg';
 import { ReactComponent as Ship } from './space/ship.svg';
+import { ReactComponent as Rocket } from './space/rocket.svg';
 import Resume from '../../../assets/Resume.pdf';
 import './style.css';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 const Header = () => {
     const windowRef = useRef();
-    const [windowDim, setWindDim] = useState({
-        height: 0,
-        width: 0
-    });
     const [mousePos, setMousePos] = useState({
         x: 0,
         y: 0
@@ -41,16 +37,6 @@ const Header = () => {
         })
     }
 
-    useLayoutEffect(() => {
-        if (windowRef.current) {
-            setWindDim({
-                width: windowRef.current.clientWidth,
-                height: windowRef.current.clientHeight
-            });
-
-        }
-    }, [])
-
     const renderPosX = () => {
         if (!move) return 0;
 
@@ -74,7 +60,10 @@ const Header = () => {
 
     return (
         <div className="header">
-            <button onClick={onClick}>Get In Touch</button>
+            <div className="buttons">
+                <button onClick={onClick} id='touch'>Get In Touch</button>
+                <button onClick={openResume} id='resume'>Resume</button>
+            </div>
             <div className="ship">
                 <div className="space" style={{
                     transform: `translate(${renderPosX()}px, ${renderPosY()}px)`
@@ -92,7 +81,9 @@ const Header = () => {
                             I’m a software developer, specializing in ReactJs. I develop mobile and web applications. Checkout my work below and feel free to get in touch if you want to work with me.
                         </h2>
                     </div>
-
+                    <div className="rocket">
+                        <Rocket />
+                    </div>
                     <div className="shooting-star shooting-star-1" />
                     <div className="shooting-star shooting-star-2" />
                     <div className="shooting-star shooting-star-3" />

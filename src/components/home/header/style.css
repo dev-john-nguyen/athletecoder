@@ -7,20 +7,68 @@
     overflow: hidden;
 }
 
-.header button {
+.buttons button {
     padding: 15px;
-    width: 20%;
     font-size: 16px;
     border-radius: 10px;
     color: #252525;
     border: 1px solid rgb(255, 255, 255);
     background-color: rgb(255, 254, 254);
     font-weight: bold;
-    margin-top: 20px;
-    z-index: 10000000;
+    margin-top: 10px;
+}
+
+.rocket svg {
+    width: 100%;
+    height: auto;
+}
+
+.rocket {
+    width: 20px;
+    height: auto;
     position: absolute;
+    left: 0%;
+    top: 40%;
+    z-index: 20;
+    animation-name: rocket;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rocket {
+    0% {
+        left: 0%;
+        top: 50%;
+        transform: rotate(80deg);
+    }
+
+    50% {
+        left: 100%;
+        top: 40%;
+        transform: rotate(80deg);
+    }
+
+    51% {
+        left: 100%;
+        top: 40%;
+        transform: rotate(-80deg);
+    }
+
+    100% {
+        left: 0%;
+        top: 30%;
+        transform: rotate(-80deg);
+    }
+}
+
+.buttons {
+    position: absolute;
+    z-index: 10000000;
     bottom: 5%;
     right: 10%;
+    display: flex;
+    flex-direction: column;
 }
 
 .space {
@@ -127,6 +175,7 @@
     align-items: center;
     position: relative;
     top: 30%;
+    z-index: 1000000;
 }
 
 .header-content h1 {
@@ -290,26 +339,70 @@
     }
 }
 
+@keyframes rocketVertical {
+    0% {
+        left: 40%;
+        top: 100%;
+        transform: rotate(5deg);
+    }
+
+    50% {
+        left: 50%;
+        top: 0%;
+        transform: rotate(5deg);
+    }
+
+    51% {
+        left: 50%;
+        top: 0%;
+        transform: rotate(175deg);
+    }
+
+    100% {
+        left: 60%;
+        top: 100%;
+        transform: rotate(175deg);
+    }
+}
+
+/* landscape */
+@media (max-width: 800px) and (max-height: 500px) and (orientation: landscape) {
+    .ship-window {
+        width: 150%;
+        height: auto;
+    }
+
+    .header-content h1 {
+        font-size: 4rem;
+    }
+
+    .header-content h2 {
+        font-size: 16px;
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    .rocket {
+        width: 20px;
+        height: auto;
+        position: absolute;
+        left: 0%;
+        top: 40%;
+        z-index: 20;
+        animation-name: rocketVertical;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
     .ship-window {
         height: 100%;
         width: auto;
     }
 
-    .header button {
-        padding: 15px;
-        width: 50%;
-        font-size: 16px;
-        border-radius: 10px;
-        color: #252525;
-        border: 1px solid rgb(255, 255, 255);
-        background-color: rgb(255, 254, 254);
-        font-weight: bold;
-        margin-top: 20px;
-        z-index: 10000000;
-        position: absolute;
-        bottom: 5%;
-        right: 10%;
+    .buttons button {
+        font-size: 14px;
     }
 
     .header-content h1 {
