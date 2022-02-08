@@ -15,7 +15,7 @@ const Blog = () => {
                 <div className="blog-content">
                     {
                         blogPosts.map((post) => (
-                            <BlogItem post={post} />
+                            <BlogItem post={post} key={post.id} />
                         ))
                     }
                 </div>
