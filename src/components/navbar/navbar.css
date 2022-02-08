@@ -6,21 +6,32 @@
 }
 
 .trans {
-    position: absolute;
     border-bottom: none;
-}
-
-.trans {
-    position: absolute;
-    border-bottom: none;
+    background-color: #f4f4f4;
 }
 
 .trans .nav-left svg {
-    fill: rgb(228, 228, 228);
+    fill: rgb(20, 20, 20);
+    box-shadow: inset 0px 4px 4px rgba(14, 14, 14, 0.25);
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.1s ease-out;
+    border-bottom: 0px solid grey;
 }
 
 .trans .nav-right a {
-    color: rgb(228, 228, 228);
+    color: rgb(20, 20, 20);
+    background-color: rgb(238, 238, 238);
+    box-shadow: inset 0px 4px 4px rgba(14, 14, 14, 0.25);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.1s ease-out;
+}
+
+.trans .nav-right a:hover,
+.trans .nav-left svg:hover {
+    transform: translateY(-2px);
+    border-bottom: 2px solid grey;
 }
 
 .nav-container {

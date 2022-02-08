@@ -7,6 +7,66 @@
     overflow: hidden;
 }
 
+.header button {
+    padding: 15px;
+    width: 20%;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #252525;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 254, 254);
+    font-weight: bold;
+    margin-top: 20px;
+    z-index: 10000000;
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+.space {
+    position: absolute;
+    background-color: #1c1c1c;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.ship-window {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+        90deg,
+        #f4f4f4 0.39%,
+        #f4f4f4 20.02%,
+        rgba(244, 244, 244, 0) 20.03%,
+        rgba(244, 244, 244, 0) 83.05%,
+        #f4f4f4 83.06%,
+        #f4f4f4 99.6%
+    );
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ship-window svg {
+    width: auto;
+    height: 100%;
+}
+
+.ship {
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header-stars {
     width: 100%;
     height: 100%;
@@ -17,38 +77,22 @@
 .header-planet {
     position: absolute;
     z-index: 1;
-    width: 25%;
+    width: 60%;
     height: auto;
-    top: 15%;
-}
-
-.header-sun {
-    position: absolute;
-    z-index: 1;
-    width: 3%;
-    height: auto;
-    top: 10%;
-    left: 30%;
+    left: -20%;
+    bottom: -10%;
 }
 
 .header-astro {
     position: absolute;
     z-index: 100;
-    width: 10%;
+    width: 40%;
     height: auto;
-    bottom: 8%;
+    bottom: -30%;
+    left: 50%;
     transition: 1s;
     transition-timing-function: ease-out;
     transform: translateX(20%);
-}
-
-.header-footprints {
-    position: absolute;
-    z-index: 2;
-    width: 2%;
-    height: auto;
-    bottom: 3%;
-    transform: translateX(-80%);
 }
 
 .header-folder {
@@ -99,35 +143,16 @@
 }
 
 .header-content h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5;
     font-weight: normal;
-    width: 50%;
+    width: 40%;
     color: white;
 
     transform: scale(0);
     animation-name: headerAnimate;
     animation-duration: 1s;
     animation-delay: 2s;
-    animation-fill-mode: forwards;
-    position: relative;
-}
-
-.header-content button {
-    padding: 15px;
-    width: 20%;
-    font-size: 16px;
-    border-radius: 10px;
-    color: #252525;
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(255, 254, 254);
-    font-weight: bold;
-    margin-top: 20px;
-
-    transform: scale(0);
-    animation-name: headerAnimate;
-    animation-duration: 1s;
-    animation-delay: 5s;
     animation-fill-mode: forwards;
     position: relative;
 }
@@ -142,8 +167,8 @@
     z-index: 0;
     border-radius: 100px;
     transform: rotate(-10deg);
-
     animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
 }
 
 .shooting-star-1 {
@@ -214,13 +239,18 @@
 }
 
 @media only screen and (max-width: 1000px) {
+    .ship-window {
+        height: 100%;
+        width: auto;
+    }
+
     .header-content h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     .header-content h2 {
-        font-size: 18px;
-        width: 90%;
+        font-size: 16px;
+        width: 50%;
     }
 
     .header-content button {
@@ -261,6 +291,27 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .ship-window {
+        height: 100%;
+        width: auto;
+    }
+
+    .header button {
+        padding: 15px;
+        width: 50%;
+        font-size: 16px;
+        border-radius: 10px;
+        color: #252525;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgb(255, 254, 254);
+        font-weight: bold;
+        margin-top: 20px;
+        z-index: 10000000;
+        position: absolute;
+        bottom: 5%;
+        right: 10%;
+    }
+
     .header-content h1 {
         font-size: 4rem;
     }
@@ -295,8 +346,10 @@
     }
 
     .header-planet {
-        width: 80%;
-        top: 20%;
+        width: 120%;
+        height: 100%;
+        left: -80%;
+        bottom: auto;
     }
 
     .header-platform {

@@ -35,6 +35,10 @@ footer {
     color: white;
 }
 
+.menu a:first-child {
+    text-decoration: none;
+}
+
 .menu a:not(:first-child) {
     font-size: 12px;
     color: rgb(219, 219, 219);
