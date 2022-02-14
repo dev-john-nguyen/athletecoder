@@ -100,7 +100,7 @@
     margin: 40px;
     text-align: center;
     font-style: italic;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
 }
 
 .blog-post blockquote a {
