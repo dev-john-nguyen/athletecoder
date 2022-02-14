@@ -99,6 +99,7 @@
     margin: 40px;
     text-align: center;
     font-style: italic;
+    overflow-wrap: anywhere;
 }
 
 .blog-post blockquote a {
