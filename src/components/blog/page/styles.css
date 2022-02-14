@@ -69,6 +69,7 @@
 
 .blog-post figure {
     margin: 5% 5% 10% 5%;
+    font-size: 14px;
 }
 
 .blog-post figure img {
@@ -78,7 +79,7 @@
 }
 
 .blog-post figure figcaption {
-    font-size: 14px;
+    font-size: inherit;
     font-family: "Noto Sans", sans-serif;
     text-align: center;
     color: rgba(41, 41, 41, 1);
@@ -86,7 +87,7 @@
 }
 
 .blog-post figure figcaption a {
-    font-size: 14px;
+    font-size: inherit;
     color: rgb(47, 47, 255);
     font-weight: 400;
 }
@@ -127,7 +128,7 @@
 .blog-post a {
     color: rgb(47, 47, 255);
     text-decoration: underline;
-    font-size: 18px;
+    font-size: inherit;
     font-family: "Noto Sans", sans-serif;
     font-weight: bold;
     text-transform: capitalize;
@@ -154,10 +155,13 @@
         font-size: 25px;
     }
 
-    .blog-post a,
     .blog-post p,
     .blog-post li {
         font-size: 16px;
+    }
+
+    .blog-post a {
+        font-size: inherit;
     }
 
     .blog-post figure figcaption,
