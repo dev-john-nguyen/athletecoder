@@ -4,7 +4,7 @@ import Link from '../../assets/Port-Link.png';
 import Softlete from '../../assets/Port-Softlete.png';
 import PVOC from '../../assets/Port-PVOC.png';
 
-export default [
+const items = [
     {
         title: 'Books&Brewskies',
         job: 'React Developer',
@@ -45,7 +45,8 @@ export default [
         img: Habt,
         className: 'portfolio-item',
         github: 'https://github.com/nguyening20/Habts',
-        website: 'https://habt-b0f23.web.app/'
+        website: 'https://habt-b0f23.web.app/',
+        heart: true
     },
     {
         title: 'Softlete',
@@ -70,6 +71,7 @@ export default [
         className: 'portfolio-item',
         github: 'https://github.com/nguyening20/softlete_public',
         website: 'https://www.softlete.com/',
+        heart: true
     },
     {
         title: 'Letslink',
@@ -113,3 +115,5 @@ export default [
         website: 'https://www.peoplesvoiceonclimate.org/'
     },
 ]
+
+export default items;

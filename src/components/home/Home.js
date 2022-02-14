@@ -83,6 +83,7 @@ const Home = () => {
                                         setActiveIndex(i)
                                         setHide(false)
                                     }}
+                                    heart={item.heart}
                                     key={i}
                                 />
                             ))
