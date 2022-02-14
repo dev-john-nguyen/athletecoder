@@ -1,78 +1,7 @@
 .space-between-content {
     margin-top: 30vh;
-    margin-bottom: 20vh;
+    margin-bottom: 30vh;
     opacity: 0;
-}
-
-.about-rocket {
-    position: fixed;
-    top: 50%;
-    left: 0px;
-    z-index: 100;
-    max-width: 40%;
-    height: auto;
-    transform: translateY(-500%);
-    animation-name: flyIn;
-    animation-duration: 1s;
-    animation-delay: 9s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-}
-
-@keyframes flyIn {
-    from {
-        transform: translateY(-500%);
-    }
-
-    to {
-        transform: translateY(0%);
-    }
-}
-
-.about-rocket-content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 150px;
-}
-
-.about-rocket-text {
-    margin-left: 10px;
-    background-color: rgb(255, 255, 255);
-    padding: 15px;
-    border-radius: 20px;
-    width: 100%;
-    box-shadow: 0px 2px 10px 1px #cfd0de;
-    box-sizing: border-box;
-    transform: scaleX(0);
-    animation-name: openText;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes openText {
-    from {
-        transform: scaleX(0) translateX(-100%);
-    }
-
-    to {
-        transform: scaleX(1) translateX(0%);
-    }
-}
-
-.about-rocket-text p {
-    font-size: 16px;
-    margin: 5px 0px 0px 0px;
-}
-
-.about-rocket-text h1 {
-    font-size: 18px;
-    margin: 10px 0px 0px 0px;
-}
-
-.about-rocket img {
-    width: auto;
-    height: 100%;
 }
 
 .animate-div {
@@ -99,8 +28,9 @@
 }
 
 .home-header h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
+    color: #e5e5e5;
 }
 
 .home-header a {
@@ -109,11 +39,13 @@
 }
 
 .home-header svg {
-    width: 10%;
+    width: 15%;
     height: auto;
     position: absolute;
-    left: 50%;
+    left: 45%;
     top: -10%;
+    fill: #ffffff;
+    opacity: 0.03;
 }
 
 .blog-flex {

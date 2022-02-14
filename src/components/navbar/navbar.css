@@ -1,5 +1,4 @@
 .nav {
-    border-bottom: 1px solid rgb(241, 241, 241);
     box-sizing: border-box;
     z-index: 100;
     width: 100%;
@@ -7,31 +6,27 @@
 
 .trans {
     border-bottom: none;
-    background-color: #f4f4f4;
+    background-color: transparent;
+    position: absolute;
+    z-index: 100000;
 }
 
 .trans .nav-left svg {
-    fill: rgb(20, 20, 20);
-    box-shadow: inset 0px 4px 4px rgba(14, 14, 14, 0.25);
+    fill: rgb(255, 255, 255);
     padding: 5px;
-    border-radius: 5px;
     transition: 0.1s ease-out;
-    border-bottom: 0px solid grey;
 }
 
 .trans .nav-right a {
-    color: rgb(20, 20, 20);
-    background-color: rgb(238, 238, 238);
-    box-shadow: inset 0px 4px 4px rgba(14, 14, 14, 0.25);
+    color: rgb(255, 255, 255);
     padding: 5px 10px;
-    border-radius: 5px;
     transition: 0.1s ease-out;
 }
 
 .trans .nav-right a:hover,
 .trans .nav-left svg:hover {
     transform: translateY(-2px);
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .nav-container {
@@ -52,7 +47,7 @@
 .nav-left svg {
     height: 5rem;
     width: 5rem;
-    fill: black;
+    fill: rgb(255, 255, 255);
 }
 
 .nav-right {
@@ -66,12 +61,13 @@
     font-size: 14px;
     margin-left: 5rem;
     cursor: pointer;
-    color: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 .nav-right a:hover {
-    border-bottom: 2px solid grey;
+    transform: translateY(-2px);
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 @media (max-width: 800px) and (max-height: 500px) and (orientation: landscape) {
@@ -88,7 +84,6 @@
     .nav-left svg {
         height: 3rem;
         width: 3rem;
-        fill: black;
     }
     .nav-container {
         box-sizing: border-box;
@@ -118,6 +113,5 @@
     .nav-left svg {
         height: 3rem;
         width: 3rem;
-        fill: black;
     }
 }

@@ -8,8 +8,8 @@ const Blog = () => {
     const posts = useContext(PostsContext);
 
     return (
-        <div className="container page-container">
-            <div className="page-header">
+        <div className="container">
+            <div className="blog-header">
                 <h1>Blog</h1>
                 <BlogSvg />
             </div>

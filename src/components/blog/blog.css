@@ -6,6 +6,28 @@
     margin-top: 10rem;
 }
 
+.blog-header {
+    position: relative;
+    margin-top: 5rem;
+}
+
+.blog-header h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: #e5e5e5;
+}
+
+.blog-header svg {
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    fill: #ffffff;
+    opacity: 0.03;
+}
+
 @media only screen and (max-width: 950px) {
     .blog-content {
         grid-template-columns: repeat(2, 1fr);

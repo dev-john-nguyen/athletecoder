@@ -10,6 +10,7 @@ form textarea {
     font-size: 16px;
     margin-bottom: 3rem;
     border: 1px solid rgb(184, 184, 184);
+    border-radius: 0px;
 }
 
 form button {
@@ -17,6 +18,29 @@ form button {
     font-size: 16px;
     border-radius: 0px;
     color: white;
-    border: 1px solid rgb(184, 184, 184);
-    background-color: rgb(20, 20, 20);
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.contact-header {
+    position: relative;
+    margin-top: 5rem;
+}
+
+.contact-header h1 {
+    font-size: 5rem;
+    text-align: center;
+    color: #e5e5e5;
+}
+
+.contact-header svg {
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    width: 15%;
+    height: auto;
+    z-index: -1;
+    fill: #ffffff;
+    opacity: 0.03;
 }

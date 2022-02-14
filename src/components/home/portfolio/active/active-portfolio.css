@@ -7,7 +7,6 @@
     align-self: center;
     justify-self: center;
     max-width: 70%;
-    box-shadow: 5px 5px 15px 5px #cfcfcf;
     box-sizing: border-box;
     transform: translateX(-120%);
 }

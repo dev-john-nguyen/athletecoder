@@ -6,6 +6,7 @@ import Blog from './components/blog/Blog';
 import Contact from './components/contact';
 import BlogPage from './components/blog/page';
 import { useEffect, createContext, useState } from 'react';
+import { ReactComponent as Stars } from './components/home/header/space/stars.svg'
 
 function replaceAll(str, find, replace) {
   return str.replace(new RegExp(find, 'g'), replace);
@@ -76,6 +77,14 @@ function App() {
   return (
     <div className="App">
       <PostsContext.Provider value={posts}>
+        <div className="space">
+          <div className="space-stars">
+            <Stars />
+          </div>
+          <div className="shooting-star shooting-star-1" />
+          <div className="shooting-star shooting-star-2" />
+          <div className="shooting-star shooting-star-3" />
+        </div>
         <Navbar trans={isTrans()} />
         {renderContent()}
         <Footer />

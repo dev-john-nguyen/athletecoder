@@ -4,7 +4,7 @@
     flex: 1;
     box-sizing: border-box;
     padding: 0px 30px 30px 30px;
-    background-color: #fff;
+    background-color: rgb(255 255 255 / 2%);
     border-radius: 0px 100px 0px 100px;
     position: relative;
     flex-direction: column;
@@ -28,12 +28,12 @@
     top: -30px;
     left: -50px;
     border-radius: 100%;
-    box-shadow: 2px 2px 20px 2px #cfcfcf;
 }
 
 .testimonial-quote h1 {
     font-size: 2rem;
     text-align: center;
+    color: #e5e5e5;
 }
 
 .testimonial-quote {
@@ -44,6 +44,7 @@
 .testimonial-name p {
     font-size: 18px;
     margin-top: 5px;
+    color: #e5e5e5;
 }
 
 @media only screen and (max-width: 600px) {
