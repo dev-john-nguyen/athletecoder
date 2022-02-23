@@ -5,53 +5,34 @@ import Footer from './components/footer/Footer';
 import Blog from './components/blog/Blog';
 import Contact from './components/contact';
 import BlogPage from './components/blog/page';
-import { useEffect, createContext, useState } from 'react';
+import { useEffect, createContext, useState, useLayoutEffect } from 'react';
 import { ReactComponent as Stars } from './components/home/header/space/stars.svg'
-
-function replaceAll(str, find, replace) {
-  return str.replace(new RegExp(find, 'g'), replace);
-}
-
 
 export const PostsContext = createContext()
 
 function App() {
   const [posts, setPosts] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@athletecoder")
-      .then((res) => res.json())
-      .then((posts) => {
-        posts.items.forEach((post, i) => {
-          //gen preview
-          const s = post.description.indexOf("<p>");
-          const e = post.description.indexOf("</p>");
-          let preview = post.description.substring(s, e);
-          preview = replaceAll(preview, "<strong>", "");
-          preview = replaceAll(preview, "</strong>", "");
+    (async () => {
+      setLoading(true)
+      await fetch("/api/posts")
+        .then((res) => res.json())
+        .then(({ data }) => setPosts(data))
+        .catch((err) => console.log(err))
+      setLoading(false)
+    })()
+  }, [])
 
-
-
-
-          const h4s = post.description.indexOf("<h4>");
-          const h4e = post.description.indexOf("</h4>");
-          const h4 = post.description.substring(h4s, h4e);
-
-          post.description = h4 + "</h4>" + preview.slice(0, 200) + "...</p>"
-
-          //gen id
-          const r = post.guid.split("https://medium.com/p/");
-          post.id = r[1];
-        })
-
-        setPosts(posts.items)
-      })
-      .catch((err) => console.log(err))
+  useLayoutEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
   }, [])
 
   const renderContent = () => {
     const path = window.location.pathname;
-    if (path.includes('/blog/')) return <BlogPage path={path} />
+    if (path.includes('/blog/')) return <BlogPage path={path} loading={loading} />
     switch (path) {
       case '/blog':
         return <Blog />

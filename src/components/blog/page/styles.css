@@ -18,6 +18,11 @@
     background-size: 1px 0.5em;
 }
 
+.blog-post-header p {
+    font-size: 16px;
+    color: rgba(41, 41, 41, 1);
+}
+
 .blog-post {
     width: 80%;
     text-align: left;
@@ -134,7 +139,6 @@
     font-weight: bold;
     text-transform: capitalize;
 }
-
 @media only screen and (max-width: 600px) {
     .blog-post,
     .blog-post-header {
@@ -182,5 +186,9 @@
     .blog-post figure figcaption,
     .blog-post figure figcaption a {
         font-size: 12px;
+    }
+
+    .blog-post-header p {
+        font-size: 14px;
     }
 }
