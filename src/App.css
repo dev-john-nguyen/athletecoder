@@ -131,6 +131,7 @@ button:hover {
 .page-container {
   padding-top: 10rem;
   background-color: #fffff7;
+  min-height: 70vh;
 }
 
 .page-header h1 {
@@ -145,7 +146,9 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
   .container {
-    padding-bottom: 2rem;
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
   }
 
   .page-container {

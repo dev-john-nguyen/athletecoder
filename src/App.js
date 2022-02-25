@@ -16,9 +16,9 @@ function App() {
   useEffect(() => {
     (async () => {
       setLoading(true)
-      await fetch("/api/posts")
+      await fetch("/posts.json")
         .then((res) => res.json())
-        .then(({ data }) => setPosts(data))
+        .then((data) => setPosts(data))
         .catch((err) => console.log(err))
       setLoading(false)
     })()

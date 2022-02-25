@@ -29,7 +29,7 @@ form button {
 }
 
 .contact-header h1 {
-    font-size: 5rem;
+    font-size: 7rem;
     text-align: center;
     color: #e5e5e5;
 }
@@ -43,4 +43,10 @@ form button {
     z-index: -1;
     fill: #ffffff;
     opacity: 0.03;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-header h1 {
+        font-size: 5rem;
+    }
 }

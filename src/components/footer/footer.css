@@ -14,7 +14,7 @@ footer {
 }
 
 .footer-section svg {
-    width: 5rem;
+    width: 6rem;
     height: auto;
     fill: white;
 }
@@ -31,7 +31,7 @@ footer {
 }
 
 .menu h1 {
-    font-size: 14px;
+    font-size: 16px;
     color: white;
 }
 
@@ -40,7 +40,7 @@ footer {
 }
 
 .menu a:not(:first-child) {
-    font-size: 12px;
+    font-size: 14px;
     color: rgb(219, 219, 219);
     margin-top: 1.5rem;
     cursor: pointer;
@@ -70,14 +70,14 @@ footer {
     }
 
     .menu h1 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .menu a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .footer-section svg {
-        width: 4rem;
+        width: 5rem;
     }
 }
